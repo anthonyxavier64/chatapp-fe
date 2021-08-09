@@ -1,0 +1,7 @@
+{
+  "name": "chatFE",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
