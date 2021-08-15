@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Register
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,33 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Register</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div align="center" style="margin:20% 5% 0 5%;">
+    <ion-card>
+      <ion-item>
+        <ion-input placeholder="Email" [(ngModel)]="newUser.email"></ion-input>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+      <ion-item> 
+        <ion-input placeholder="Password" [(ngModel)]="newUser.password" type="password"></ion-input>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+      <ion-item> 
+        <ion-input placeholder="Retype Password" [(ngModel)]="newUser.rePassword" type="password"></ion-input>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+      <ion-item> 
+        <ion-input placeholder="First Name" [(ngModel)]="newUser.firstName"></ion-input>
+      </ion-item>
+      <ion-item-divider></ion-item-divider>
+      <ion-item> 
+        <ion-input placeholder="Last Name" [(ngModel)]="newUser.lastName"></ion-input>
+      </ion-item>
+    </ion-card>
+    <ion-item-divider></ion-item-divider>
+    <ion-button (click)="handleRegister()">Register</ion-button>
+  </div>
 </ion-content>

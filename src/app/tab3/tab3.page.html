@@ -1,17 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Messages </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Messages</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div *ngIf="user">
+    <ion-card>
+      <ion-card-title style="text-align: center"> User Details </ion-card-title>
+      <ion-card-content>
+        <ion-item> <ion-label>Email:</ion-label>{{ user.email }} </ion-item>
+        <ion-item>
+          <ion-label>First Name:</ion-label>{{ user.firstName }}
+        </ion-item>
+        <ion-item>
+          <ion-label>Last Name:</ion-label>{{ user.lastName }}
+        </ion-item>
+        <div style="text-align: center">
+          <ion-button (click)="handleLogout()">Logout</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-item *ngFor="let user of userList" button (click)="handleClickChat(user)">
+        {{ user.email }}  
+        <hr />
+      </ion-item>
+    </ion-card>
+  </div>
 </ion-content>

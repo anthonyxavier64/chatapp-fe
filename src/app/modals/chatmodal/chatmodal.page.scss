@@ -1,0 +1,17 @@
+.input-wrap {
+    padding: 5px;
+    display: flex;
+    textarea {
+      flex: 3;
+      border: 0;
+      border-bottom: 1px #000;
+      border-style: solid;
+    }
+    button {
+        flex: 1;
+    }
+}
+ion-footer {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
+    background-color: #fff;
+}
